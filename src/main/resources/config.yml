@@ -1,0 +1,27 @@
+########################################
+#                                      #
+#           EXAMPLE CONFIG             #
+#                                      #
+########################################
+
+#Placeholder List
+
+# - '{prefix}' used to get the plugin prefix for chat messages
+# - '{color}' used to get the player's set chat color
+
+
+#Messages
+
+plugin-prefix: "&8[&dChatColors&8]"
+set-chat-color-msg: "{prefix} >> &aSuccessfully set your chat color to {color}!" # Message sent when a player successfully sets their chat colour
+insufficient-permissions-message: "{prefix} >> &cYou don't have the correct permissions to open the chat colours GUI!" # Sent when a player tries to open the chat colors gui but doesn't have perms
+
+# GUI
+gui-title: "&cC&6h&ea&at &9C&5o&dl&co&6r&es"
+has-color-lore: "&aYou have this color! Click to apply." # Applied to the color's item in the gui to show that they have this color
+not-have-color-lore: "&aYou don't have this color!" # Applied to the color's item in the gui to show that they don't have this color
+
+#Other
+
+#Colors list: black, dark_blue, dark_green, cyan, dark_red, purple, gold, gray, dark_gray, blue, green, aqua, red, pink, yellow and white
+default-color: "white"

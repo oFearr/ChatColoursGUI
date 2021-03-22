@@ -1,0 +1,11 @@
+name: ChatColorsGUI
+version: ${project.version}
+main: me.ofearr.chatcoloursgui.Main
+api-version: 1.13
+commands:
+  chatcolors:
+    description: Open the chat colors GUI.
+    aliases: [chat-colors, chatcolours, colorsgui, coloursgui, setchatcolor, setchatcolour]
+permissions:
+  chatcoloursgui.gui:
+    description: Allow players to open the chat colors GUI.
