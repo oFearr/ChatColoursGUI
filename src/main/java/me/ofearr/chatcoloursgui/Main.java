@@ -2,6 +2,7 @@ package me.ofearr.chatcoloursgui;
 
 import me.ofearr.chatcoloursgui.Commands.ChatColoursCMD;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -18,6 +19,14 @@ public final class Main extends JavaPlugin {
        loadConfig();
        getCommand("chatcolors").setExecutor(new ChatColoursCMD());
         Bukkit.getPluginManager().registerEvents(new ChatColorEvents(), this);
+    }
+
+    @Override
+    public void onDisable(){
+        for(Player p : Bukkit.getOnlinePlayers()){
+            ChatColorEvents.writeDataToFile(p);
+        }
+        System.out.println("[ChatColorGUI] Successfully saved all user data to files!");
     }
 
     public void loadConfig(){
