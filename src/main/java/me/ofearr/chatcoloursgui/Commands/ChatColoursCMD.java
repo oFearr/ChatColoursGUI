@@ -26,7 +26,7 @@ public class ChatColoursCMD implements CommandExecutor {
                 sender.sendMessage(TranslateColours(prefix + " >> &cYou must be a player to issue this command!"));
             } else {
                 Player player = (Player) sender;
-                if(player.hasPermission("chatcoloursgui.gui")){
+                if(player.hasPermission("chatcolorsgui.gui")){
                     player.openInventory(ChatColorsGUI.GUI(player));
                 } else {
                     player.sendMessage(TranslateColours(plugin.getConfig().getString("insufficient-permissions-message").replace("{prefix}", prefix)));

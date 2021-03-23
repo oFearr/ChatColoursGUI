@@ -1,14 +1,12 @@
 package me.ofearr.chatcoloursgui;
 
 import org.bukkit.ChatColor;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class ChatColorEvents implements Listener {
@@ -20,49 +18,6 @@ public class ChatColorEvents implements Listener {
     }
 
     static Main plugin = Main.plugin;
-
-    public static void collectDataFromFile(Player player){
-        createData(player);
-        PlayerData.load(player);
-        Main.enabledColor.put(player.getUniqueId(), PlayerData.get().getString("enabled"));
-    }
-
-    public static void writeDataToFile(Player player){
-        PlayerData.load(player);
-        PlayerData.get().set("enabled", Main.enabledColor.get(player.getUniqueId()));
-        PlayerData.save();
-    }
-
-    public static void createData(Player player){
-        PlayerData.create(player);
-        PlayerData.load(player);
-        if(PlayerData.get().getString("enabled") == null){
-            PlayerData.get().set("enabled", plugin.getConfig().getString("default-color"));
-            PlayerData.save();
-        }
-
-    }
-
-    public static void createData(OfflinePlayer player){
-        PlayerData.create(player);
-        PlayerData.load(player);
-        if(PlayerData.get().getString("enabled") == null){
-            PlayerData.get().set("enabled", plugin.getConfig().getString("default-color"));
-            PlayerData.save();
-        }
-    }
-
-    @EventHandler
-    public void onLogIn(PlayerJoinEvent e){
-        Player player = e.getPlayer();
-        collectDataFromFile(player);
-    }
-
-    @EventHandler
-    public void onLogOut(PlayerJoinEvent e){
-        Player player = e.getPlayer();
-        writeDataToFile(player);
-    }
 
     @EventHandler
     public static void applyChatColor(AsyncPlayerChatEvent e){
@@ -99,6 +54,9 @@ public class ChatColorEvents implements Listener {
             coloredMessage = ChatColor.YELLOW + msg;
         } else if(Main.enabledColor.get(player.getUniqueId()) == "white"){
             coloredMessage = ChatColor.WHITE + msg;
+        } else {
+            e.setMessage(msg);
+            return;
         }
         e.setMessage(coloredMessage);
 

@@ -5,7 +5,60 @@ api-version: 1.13
 commands:
   chatcolors:
     description: Open the chat colors GUI.
-    aliases: [chat-colors, chatcolours, colorsgui, coloursgui, setchatcolor, setchatcolour]
+    aliases: [chat-colors, chatcolours, colorsgui, coloursgui, setchatcolor, setchatcolour, charcolor, chatcolour]
 permissions:
-  chatcoloursgui.gui:
+  chatcolorsgui.gui:
     description: Allow players to open the chat colors GUI.
+  chatcolorsgui.black:
+    description: Allows use of the black chat color.
+  chatcolorsgui.darkblue:
+    description: Allows use of the dark blue chat color.
+  chatcolorsgui.darkgreen:
+    description: Allows use of the dark green chat color.
+  chatcolorsgui.cyan:
+    description: Allows use of the cyan chat color.
+  chatcolorsgui.darkred:
+    description: Allows use of the dark red chat color.
+  chatcolorsgui.purple:
+    description: Allows use of the purple chat color.
+  chatcolorsgui.gold:
+    description: Allows use of the gold chat color.
+  chatcolorsgui.gray:
+    description: Allows use of the gray chat color.
+  chatcolorsgui.darkgray:
+    description: Allows use of the dark gray chat color.
+  chatcolorsgui.blue:
+    description: Allows use of the blue chat color.
+  chatcolorsgui.green:
+    description: Allows use of the green chat color.
+  chatcolorsgui.aqua:
+    description: Allows use of the aqua chat color.
+  chatcolorsgui.red:
+    description: Allows use of the red chat color.
+  chatcolorsgui.pink:
+    description: Allows use of the pink chat color.
+  chatcolorsgui.yellow:
+    description: Allows use of the yellow chat color.
+  chatcolorsgui.white:
+    description: Allows use of the white chat color.
+  chatcolorsgui.*:
+    description: Grants access to all of the chat colors gui permissions.
+    default: op
+    children:
+      chatcolorsgui.gui: true
+      chatcolorsgui.black: true
+      chatcolorsgui.darkblue: true
+      chatcolorsgui.darkgreen: true
+      chatcolorsgui.cyan: true
+      chatcolorsgui.darkred: true
+      chatcolorsgui.purple: true
+      chatcolorsgui.gold: true
+      chatcolorsgui.gray: true
+      chatcolorsgui.darkgray: true
+      chatcolorsgui.blue: true
+      chatcolorsgui.green: true
+      chatcolorsgui.aqua: true
+      chatcolorsgui.red: true
+      chatcolorsgui.pink: true
+      chatcolorsgui.yellow: true
+      chatcolorsgui.white: true

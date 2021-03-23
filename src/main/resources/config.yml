@@ -19,7 +19,7 @@ insufficient-permissions-message: "{prefix} >> &cYou don't have the correct perm
 # GUI
 gui-title: "&cC&6h&ea&at &9C&5o&dl&co&6r&es"
 has-color-lore: "&aYou have this color! Click to apply." # Applied to the color's item in the gui to show that they have this color
-not-have-color-lore: "&aYou don't have this color!" # Applied to the color's item in the gui to show that they don't have this color
+not-have-color-lore: "&cYou don't have this color!" # Applied to the color's item in the gui to show that they don't have this color
 
 #Other
 

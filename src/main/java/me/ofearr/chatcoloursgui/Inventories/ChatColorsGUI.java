@@ -98,198 +98,198 @@ public class ChatColorsGUI {
             white = new ItemStack(Material.WHITE_STAINED_GLASS_PANE);
         }
 
-            ItemMeta blackMeta = black.getItemMeta();
-            blackMeta.setDisplayName(TranslateColours("&0Black Chat Color"));
-            List<String> blackLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.black")){
-                blackLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                blackLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            blackMeta.setLore(blackLore);
-            black.setItemMeta(blackMeta);
+        ItemMeta blackMeta = black.getItemMeta();
+        blackMeta.setDisplayName(TranslateColours("&0Black Chat Color"));
+        List<String> blackLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.black")){
+            blackLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            blackLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        blackMeta.setLore(blackLore);
+        black.setItemMeta(blackMeta);
 
-            ItemMeta dbMeta = dark_blue.getItemMeta();
-            dbMeta.setDisplayName(TranslateColours("&1Dark Blue Chat Color"));
-            List<String> dbLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.darkblue")){
-                dbLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                dbLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            dbMeta.setLore(dbLore);
-            dark_blue.setItemMeta(dbMeta);
+        ItemMeta dbMeta = dark_blue.getItemMeta();
+        dbMeta.setDisplayName(TranslateColours("&1Dark Blue Chat Color"));
+        List<String> dbLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.darkblue")){
+            dbLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            dbLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        dbMeta.setLore(dbLore);
+        dark_blue.setItemMeta(dbMeta);
 
-            ItemMeta dark_greenMeta = dark_green.getItemMeta();
-            dark_greenMeta.setDisplayName(TranslateColours("&2Dark Green Chat Color"));
-            List<String> dark_greenLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.darkgreen")){
-                dark_greenLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                dark_greenLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            dark_greenMeta.setLore(dark_greenLore);
-            dark_green.setItemMeta(dark_greenMeta);
+        ItemMeta dark_greenMeta = dark_green.getItemMeta();
+        dark_greenMeta.setDisplayName(TranslateColours("&2Dark Green Chat Color"));
+        List<String> dark_greenLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.darkgreen")){
+            dark_greenLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            dark_greenLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        dark_greenMeta.setLore(dark_greenLore);
+        dark_green.setItemMeta(dark_greenMeta);
 
-            ItemMeta cyanMeta = cyan.getItemMeta();
-            cyanMeta.setDisplayName(TranslateColours("&3Cyan Chat Color"));
-            List<String> cyanLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.cyan")){
-                cyanLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                cyanLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            cyanMeta.setLore(cyanLore);
-            cyan.setItemMeta(cyanMeta);
+        ItemMeta cyanMeta = cyan.getItemMeta();
+        cyanMeta.setDisplayName(TranslateColours("&3Cyan Chat Color"));
+        List<String> cyanLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.cyan")){
+            cyanLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            cyanLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        cyanMeta.setLore(cyanLore);
+        cyan.setItemMeta(cyanMeta);
 
-            ItemMeta dark_redMeta = dark_red.getItemMeta();
-            dark_redMeta.setDisplayName(TranslateColours("&4Dark Red Chat Color"));
-            List<String> dark_redLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.darkred")){
-                dark_redLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                dark_redLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            dark_redMeta.setLore(dark_redLore);
-            dark_red.setItemMeta(dark_redMeta);
+        ItemMeta dark_redMeta = dark_red.getItemMeta();
+        dark_redMeta.setDisplayName(TranslateColours("&4Dark Red Chat Color"));
+        List<String> dark_redLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.darkred")){
+            dark_redLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            dark_redLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        dark_redMeta.setLore(dark_redLore);
+        dark_red.setItemMeta(dark_redMeta);
 
-            ItemMeta purpleMeta = purple.getItemMeta();
-            purpleMeta.setDisplayName(TranslateColours("&5Purple Chat Color"));
-            List<String> purpleLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.purple")){
-                purpleLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                purpleLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            purpleMeta.setLore(purpleLore);
-            purple.setItemMeta(purpleMeta);
+        ItemMeta purpleMeta = purple.getItemMeta();
+        purpleMeta.setDisplayName(TranslateColours("&5Purple Chat Color"));
+        List<String> purpleLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.purple")){
+            purpleLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            purpleLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        purpleMeta.setLore(purpleLore);
+        purple.setItemMeta(purpleMeta);
 
-            ItemMeta goldMeta = gold.getItemMeta();
-            goldMeta.setDisplayName(TranslateColours("&6Gold Chat Color"));
-            List<String> goldLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.gold")){
-                goldLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                goldLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            goldMeta.setLore(goldLore);
-            gold.setItemMeta(goldMeta);
+        ItemMeta goldMeta = gold.getItemMeta();
+        goldMeta.setDisplayName(TranslateColours("&6Gold Chat Color"));
+        List<String> goldLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.gold")){
+            goldLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            goldLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        goldMeta.setLore(goldLore);
+        gold.setItemMeta(goldMeta);
 
-            ItemMeta grayMeta = gray.getItemMeta();
-            grayMeta.setDisplayName(TranslateColours("&7Gray Chat Color"));
-            List<String> grayLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.gray")){
-                grayLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                grayLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            grayMeta.setLore(grayLore);
-            gray.setItemMeta(grayMeta);
+        ItemMeta grayMeta = gray.getItemMeta();
+        grayMeta.setDisplayName(TranslateColours("&7Gray Chat Color"));
+        List<String> grayLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.gray")){
+            grayLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            grayLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        grayMeta.setLore(grayLore);
+        gray.setItemMeta(grayMeta);
 
-            ItemMeta dark_grayMeta = dark_gray.getItemMeta();
-            dark_grayMeta.setDisplayName(TranslateColours("&8Dark Gray Chat Color"));
-            List<String> dark_grayLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.darkgray")){
-                dark_grayLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                dark_grayLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            dark_grayMeta.setLore(dark_grayLore);
-            dark_gray.setItemMeta(dark_grayMeta);
+        ItemMeta dark_grayMeta = dark_gray.getItemMeta();
+        dark_grayMeta.setDisplayName(TranslateColours("&8Dark Gray Chat Color"));
+        List<String> dark_grayLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.darkgray")){
+            dark_grayLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            dark_grayLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        dark_grayMeta.setLore(dark_grayLore);
+        dark_gray.setItemMeta(dark_grayMeta);
 
-            ItemMeta blueMeta = blue.getItemMeta();
-            blueMeta.setDisplayName(TranslateColours("&9Blue Chat Color"));
-            List<String> blueLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.blue")){
-                blueLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                blueLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            blueMeta.setLore(blueLore);
-            blue.setItemMeta(blueMeta);
+        ItemMeta blueMeta = blue.getItemMeta();
+        blueMeta.setDisplayName(TranslateColours("&9Blue Chat Color"));
+        List<String> blueLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.blue")){
+            blueLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            blueLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        blueMeta.setLore(blueLore);
+        blue.setItemMeta(blueMeta);
 
-            ItemMeta greenMeta = green.getItemMeta();
-            greenMeta.setDisplayName(TranslateColours("&aGreen Chat Color"));
-            List<String> greenLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.green")){
-                greenLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                greenLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            greenMeta.setLore(greenLore);
-            green.setItemMeta(greenMeta);
+        ItemMeta greenMeta = green.getItemMeta();
+        greenMeta.setDisplayName(TranslateColours("&aGreen Chat Color"));
+        List<String> greenLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.green")){
+            greenLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            greenLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        greenMeta.setLore(greenLore);
+        green.setItemMeta(greenMeta);
 
-            ItemMeta aquaMeta = aqua.getItemMeta();
-            aquaMeta.setDisplayName(TranslateColours("&bAqua Chat Color"));
-            List<String> aquaLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.aqua")){
-                aquaLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                aquaLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            aquaMeta.setLore(aquaLore);
-            aqua.setItemMeta(aquaMeta);
+        ItemMeta aquaMeta = aqua.getItemMeta();
+        aquaMeta.setDisplayName(TranslateColours("&bAqua Chat Color"));
+        List<String> aquaLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.aqua")){
+            aquaLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            aquaLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        aquaMeta.setLore(aquaLore);
+        aqua.setItemMeta(aquaMeta);
 
-            ItemMeta redMeta = red.getItemMeta();
-            redMeta.setDisplayName(TranslateColours("&cRed Chat Color"));
-            List<String> redLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.red")){
-                redLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                redLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            redMeta.setLore(redLore);
-            red.setItemMeta(redMeta);
+        ItemMeta redMeta = red.getItemMeta();
+        redMeta.setDisplayName(TranslateColours("&cRed Chat Color"));
+        List<String> redLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.red")){
+            redLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            redLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        redMeta.setLore(redLore);
+        red.setItemMeta(redMeta);
 
-            ItemMeta pinkMeta = pink.getItemMeta();
-            pinkMeta.setDisplayName(TranslateColours("&dPink Chat Color"));
-            List<String> pinkLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.pink")){
-                pinkLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                pinkLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            pinkMeta.setLore(pinkLore);
-            pink.setItemMeta(pinkMeta);
+        ItemMeta pinkMeta = pink.getItemMeta();
+        pinkMeta.setDisplayName(TranslateColours("&dPink Chat Color"));
+        List<String> pinkLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.pink")){
+            pinkLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            pinkLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        pinkMeta.setLore(pinkLore);
+        pink.setItemMeta(pinkMeta);
 
-            ItemMeta yellowMeta = yellow.getItemMeta();
-            yellowMeta.setDisplayName(TranslateColours("&eYellow Chat Color"));
-            List<String> yellowLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.yellow")){
-                yellowLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                yellowLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            yellowMeta.setLore(yellowLore);
-            yellow.setItemMeta(yellowMeta);
+        ItemMeta yellowMeta = yellow.getItemMeta();
+        yellowMeta.setDisplayName(TranslateColours("&eYellow Chat Color"));
+        List<String> yellowLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.yellow")){
+            yellowLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            yellowLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        yellowMeta.setLore(yellowLore);
+        yellow.setItemMeta(yellowMeta);
 
-            ItemMeta whiteMeta = white.getItemMeta();
-            whiteMeta.setDisplayName(TranslateColours("&fWhite Chat Color"));
-            List<String> whiteLore = new ArrayList<>();
-            if(player.hasPermission("chatcoloursgui.white")){
-                whiteLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
-            } else {
-                whiteLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
-            }
-            whiteMeta.setLore(whiteLore);
-            white.setItemMeta(whiteMeta);
+        ItemMeta whiteMeta = white.getItemMeta();
+        whiteMeta.setDisplayName(TranslateColours("&fWhite Chat Color"));
+        List<String> whiteLore = new ArrayList<>();
+        if(player.hasPermission("chatcolorsgui.white")){
+            whiteLore.add(TranslateColours(plugin.getConfig().getString("has-color-lore")));
+        } else {
+            whiteLore.add(TranslateColours(plugin.getConfig().getString("not-have-color-lore")));
+        }
+        whiteMeta.setLore(whiteLore);
+        white.setItemMeta(whiteMeta);
 
-            inv.addItem(black);
-            inv.addItem(white);
-            inv.addItem(dark_blue);
-            inv.addItem(dark_green);
-            inv.addItem(cyan);
-            inv.addItem(dark_red);
-            inv.addItem(purple);
-            inv.addItem(gold);
-            inv.addItem(gray);
-            inv.addItem(dark_gray);
-            inv.addItem(blue);
-            inv.addItem(green);
-            inv.addItem(aqua);
-            inv.addItem(red);
-            inv.addItem(pink);
-            inv.addItem(yellow);
+        inv.addItem(black);
+        inv.addItem(white);
+        inv.addItem(dark_blue);
+        inv.addItem(dark_green);
+        inv.addItem(cyan);
+        inv.addItem(dark_red);
+        inv.addItem(purple);
+        inv.addItem(gold);
+        inv.addItem(gray);
+        inv.addItem(dark_gray);
+        inv.addItem(blue);
+        inv.addItem(green);
+        inv.addItem(aqua);
+        inv.addItem(red);
+        inv.addItem(pink);
+        inv.addItem(yellow);
 
         return inv;
     }
