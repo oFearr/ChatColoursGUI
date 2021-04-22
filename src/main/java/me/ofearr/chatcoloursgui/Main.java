@@ -11,6 +11,7 @@ public final class Main extends JavaPlugin {
 
     public static Main plugin;
     public static HashMap<UUID, String> enabledColor = new HashMap<>();
+    public static HashMap<UUID, String> enabledAddon = new HashMap<>();
 
     @Override
     public void onEnable() {

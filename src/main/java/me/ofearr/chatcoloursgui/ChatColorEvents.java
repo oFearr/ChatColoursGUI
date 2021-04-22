@@ -23,42 +23,49 @@ public class ChatColorEvents implements Listener {
     public static void applyChatColor(AsyncPlayerChatEvent e){
         Player player = e.getPlayer();
         String msg = e.getMessage();
-        String coloredMessage = "";
+        String color = "";
+        String addition = "";
+
+        String completeMessage = "";
         if(Main.enabledColor.get(player.getUniqueId()) == "black"){
-            coloredMessage = ChatColor.BLACK + msg;
+            color = ChatColor.BLACK + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "dark_blue"){
-            coloredMessage = ChatColor.DARK_BLUE + msg;
+            color = ChatColor.DARK_BLUE + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "dark_green"){
-            coloredMessage = ChatColor.DARK_GREEN + msg;
+            color = ChatColor.DARK_GREEN + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "cyan"){
-            coloredMessage = ChatColor.DARK_AQUA + msg;
+            color = ChatColor.DARK_AQUA + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "dark_red"){
-            coloredMessage = ChatColor.DARK_RED + msg;
+            color = ChatColor.DARK_RED + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "purple"){
-            coloredMessage = ChatColor.DARK_PURPLE + msg;
+            color = ChatColor.DARK_PURPLE + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "gold"){
-            coloredMessage = ChatColor.GOLD + msg;
+            color = ChatColor.GOLD + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "gray"){
-            coloredMessage = ChatColor.GRAY + msg;
+            color = ChatColor.GRAY + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "blue"){
-            coloredMessage = ChatColor.BLUE + msg;
+            color = ChatColor.BLUE + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "green"){
-            coloredMessage = ChatColor.GREEN + msg;
+            color = ChatColor.GREEN + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "aqua"){
-            coloredMessage = ChatColor.AQUA + msg;
+            color = ChatColor.AQUA + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "red"){
-            coloredMessage = ChatColor.RED + msg;
+            color = ChatColor.RED + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "pink"){
-            coloredMessage = ChatColor.LIGHT_PURPLE + msg;
+            color = ChatColor.LIGHT_PURPLE + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "yellow"){
-            coloredMessage = ChatColor.YELLOW + msg;
+            color = ChatColor.YELLOW + "";
         } else if(Main.enabledColor.get(player.getUniqueId()) == "white"){
-            coloredMessage = ChatColor.WHITE + msg;
+            color = ChatColor.WHITE + "";
+        } if(Main.enabledAddon.get(player.getUniqueId()) == "bold"){
+            addition = ChatColor.BOLD + "";
         } else {
             e.setMessage(msg);
             return;
         }
-        e.setMessage(coloredMessage);
+
+        completeMessage = color + addition + msg;
+        e.setMessage(completeMessage);
 
     }
 
@@ -88,67 +95,67 @@ public class ChatColorEvents implements Listener {
 
             String itemName = item.getItemMeta().getDisplayName();
 
-            if(itemName.contains("Black") && player.hasPermission("chatcoloursgui.black")){
+            if(itemName.contains("Black") && player.hasPermission("chatcolorsgui.black")){
                 Main.enabledColor.put(player.getUniqueId(), "black");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Dark Blue") && player.hasPermission("chatcoloursgui.darkblue")){
+            } else if(itemName.contains("Dark Blue") && player.hasPermission("chatcolorsgui.darkblue")){
                 Main.enabledColor.put(player.getUniqueId(), "dark_blue");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Dark Green") && player.hasPermission("chatcoloursgui.darkgreen")){
+            } else if(itemName.contains("Dark Green") && player.hasPermission("chatcolorsgui.darkgreen")){
                 Main.enabledColor.put(player.getUniqueId(), "dark_green");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Cyan") && player.hasPermission("chatcoloursgui.cyan")){
+            } else if(itemName.contains("Cyan") && player.hasPermission("chatcolorsgui.cyan")){
                 Main.enabledColor.put(player.getUniqueId(), "cyan");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Dark Red") && player.hasPermission("chatcoloursgui.darkred")){
+            } else if(itemName.contains("Dark Red") && player.hasPermission("chatcolorsgui.darkred")){
                 Main.enabledColor.put(player.getUniqueId(), "dark_red");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Purple") && player.hasPermission("chatcoloursgui.purple")){
+            } else if(itemName.contains("Purple") && player.hasPermission("chatcolorsgui.purple")){
                 Main.enabledColor.put(player.getUniqueId(), "purple");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Gold") && player.hasPermission("chatcoloursgui.gold")){
+            } else if(itemName.contains("Gold") && player.hasPermission("chatcolorsgui.gold")){
                 Main.enabledColor.put(player.getUniqueId(), "gold");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Gray") && player.hasPermission("chatcoloursgui.gray")){
+            } else if(itemName.contains("Gray") && player.hasPermission("chatcolorsgui.gray")){
                 Main.enabledColor.put(player.getUniqueId(), "gray");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Dark Gray")&& player.hasPermission("chatcoloursgui.darkgray")){
+            } else if(itemName.contains("Dark Gray")&& player.hasPermission("chatcolorsgui.darkgray")){
                 Main.enabledColor.put(player.getUniqueId(), "dark_gray");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Blue") && player.hasPermission("chatcoloursgui.blue")){
+            } else if(itemName.contains("Blue") && player.hasPermission("chatcolorsgui.blue")){
                 Main.enabledColor.put(player.getUniqueId(), "blue");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Green") && player.hasPermission("chatcoloursgui.green")){
+            } else if(itemName.contains("Green") && player.hasPermission("chatcolorsgui.green")){
                 Main.enabledColor.put(player.getUniqueId(), "green");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Aqua") && player.hasPermission("chatcoloursgui.aqua")){
+            } else if(itemName.contains("Aqua") && player.hasPermission("chatcolorsgui.aqua")){
                 Main.enabledColor.put(player.getUniqueId(), "aqua");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Red") && player.hasPermission("chatcoloursgui.red")){
+            } else if(itemName.contains("Red") && player.hasPermission("chatcolorsgui.red")){
                 Main.enabledColor.put(player.getUniqueId(), "red");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Pink") && player.hasPermission("chatcoloursgui.pink")){
+            } else if(itemName.contains("Pink") && player.hasPermission("chatcolorsgui.pink")){
                 Main.enabledColor.put(player.getUniqueId(), "pink");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("Yellow") && player.hasPermission("chatcoloursgui.yellow")){
+            } else if(itemName.contains("Yellow") && player.hasPermission("chatcolorsgui.yellow")){
                 Main.enabledColor.put(player.getUniqueId(), "yellow");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
-            } else if(itemName.contains("White") && player.hasPermission("chatcoloursgui.white")){
+            } else if(itemName.contains("White") && player.hasPermission("chatcolorsgui.white")){
                 Main.enabledColor.put(player.getUniqueId(), "white");
                 String setMessage = plugin.getConfig().getString("set-chat-color-msg").replace("{color}", Main.enabledColor.get(player.getUniqueId())).replace("{prefix}", plugin.getConfig().getString("plugin-prefix"));
                 player.sendMessage(TranslateColours(setMessage));
